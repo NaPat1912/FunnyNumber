@@ -22,17 +22,27 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Funny Number" id="A8o-BV-GGN">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="3xj-8Q-xgn"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="rpp-Vz-DUp"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="3xj-8Q-xgn">
+                                            <connections>
+                                                <action selector="decreaseButtonItem:" destination="BYZ-38-t0r" id="2Z1-Ww-Ljl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="fastForward" id="rpp-Vz-DUp">
+                                            <connections>
+                                                <action selector="increaseButtonItem:" destination="BYZ-38-t0r" id="7ZX-y1-QIw"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bg5.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qaz-Fa-WNG">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxV-l6-KWe">
-                                <rect key="frame" x="47" y="178" width="280" height="311"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HxV-l6-KWe">
+                                <rect key="frame" x="0.0" y="181" width="375" height="305.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="305.5" id="tAN-YE-6jb"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="250"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,17 +55,24 @@
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3aQ-uz-zla"/>
                             <constraint firstItem="5Us-qL-LY5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FMH-ZA-48Z"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HIZ-RD-80Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HxV-l6-KWe" secondAttribute="trailing" id="Ljj-99-MjI"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MNb-LX-d3x"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UF5-py-k42"/>
                             <constraint firstItem="5Us-qL-LY5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dhl-hu-6Vm"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="iTU-mr-Zww"/>
+                            <constraint firstItem="HxV-l6-KWe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ibI-ad-XXW"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="top" secondItem="5Us-qL-LY5" secondAttribute="bottom" id="m1e-Lf-9fb"/>
                             <constraint firstItem="5Us-qL-LY5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mc0-Wo-bUx"/>
+                            <constraint firstItem="HxV-l6-KWe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="owT-uM-5mP"/>
+                            <constraint firstItem="HxV-l6-KWe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uTE-s0-aHf"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="top" secondItem="5Us-qL-LY5" secondAttribute="bottom" id="yWL-6K-0t6"/>
                             <constraint firstItem="Qaz-Fa-WNG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zpd-yU-fV3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="numberLabel" destination="HxV-l6-KWe" id="MnK-aw-3FT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
